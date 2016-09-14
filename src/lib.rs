@@ -9,6 +9,8 @@ extern crate glib_sys as glib;
 extern crate gobject_sys as gobject;
 extern crate gio_sys as gio;
 
+use libc::sockaddr;
+
 #[allow(unused_imports)]
 use libc::{c_int, c_char, c_uchar, c_float, c_uint, c_double,
     c_short, c_ushort, c_long, c_ulong,
@@ -855,11 +857,11 @@ pub struct SoupAuthManagerClass {
 #[repr(C)]
 pub struct SoupAuthManagerPrivate(c_void);
 
-//#[repr(C)]
-//pub struct SoupBuffer {
-//    pub data: [TypeId { ns_id: 0, id: 25 } *.Pointer],
-//    pub length: size_t,
-//}
+#[repr(C)]
+pub struct SoupBuffer {
+   pub data: *mut c_char,
+   pub length: size_t,
+}
 
 #[repr(C)]
 pub struct SoupCacheClass {
