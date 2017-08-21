@@ -35,7 +35,7 @@ pkg-config = "0.3.7"
 
 [dependencies]
 bitflags = "0.4"
-gio-sys = "^0.3.4"
-glib-sys = "^0.3.4"
-gobject-sys = "^0.3.4"
+gio-sys = "^0.4.0"
+glib-sys = "^0.4.0"
+gobject-sys = "^0.4.0"
 libc = "0.2"
