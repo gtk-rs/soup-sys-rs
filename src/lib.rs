@@ -624,8 +624,8 @@ impl ::std::fmt::Debug for SoupAuthManagerPrivate {
 
 #[repr(C)]
 pub struct SoupBuffer {
-   pub data: *mut c_char,
-   pub length: size_t,
+    pub data: *mut c_char,
+    pub length: size_t,
 }
 
 impl ::std::fmt::Debug for SoupBuffer {
