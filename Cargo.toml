@@ -1,17 +1,21 @@
-[package]
-authors = ["The Gtk-rs Project Developers"]
-build = "build.rs"
-description = "Soup FFI crate for Rust"
-license = "MIT"
-links = "soup"
-name = "soup-sys"
-repository = "https://github.com/gtk-rs/soup-sys-rs"
-version = "0.4.0"
+[build-dependencies]
+pkg-config = "0.3.7"
 
-[lib]
-name = "soup_sys"
+[dependencies]
+bitflags = "1.0"
+libc = "0.2"
+
+[dependencies.gio-sys]
+git = "https://github.com/gtk-rs/sys"
+
+[dependencies.glib-sys]
+git = "https://github.com/gtk-rs/sys"
+
+[dependencies.gobject-sys]
+git = "https://github.com/gtk-rs/sys"
 
 [features]
+dox = []
 v2_24 = []
 v2_26 = ["v2_24"]
 v2_26_3 = ["v2_26"]
@@ -29,13 +33,17 @@ v2_48 = ["v2_46"]
 v2_50 = ["v2_48"]
 v2_52 = ["v2_50"]
 v2_54 = ["v2_52"]
+v2_56 = ["v2_54"]
 
-[build-dependencies]
-pkg-config = "0.3.7"
+[lib]
+name = "soup_sys"
 
-[dependencies]
-bitflags = "0.4"
-gio-sys = { git = "https://github.com/gtk-rs/sys" }
-glib-sys = { git = "https://github.com/gtk-rs/sys" }
-gobject-sys = { git = "https://github.com/gtk-rs/sys" }
-libc = "0.2"
+[package]
+authors = ["The Gtk-rs Project Developers"]
+build = "build.rs"
+description = "Soup FFI crate for Rust"
+license = "MIT"
+links = "soup"
+name = "soup-sys"
+repository = "https://github.com/gtk-rs/soup-sys-rs"
+version = "0.5.0"
