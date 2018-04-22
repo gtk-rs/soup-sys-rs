@@ -16,7 +16,11 @@ fn main() {
 fn find() -> Result<(), Error> {
     let package_name = "libsoup-2.4";
     let shared_libs = ["soup-2.4"];
-    let version = if cfg!(feature = "v2_56") {
+    let version = if cfg!(feature = "v2_60") {
+        "2.60"
+    } else if cfg!(feature = "v2_58") {
+        "2.58"
+    } else if cfg!(feature = "v2_56") {
         "2.56"
     } else if cfg!(feature = "v2_54") {
         "2.54"
@@ -67,6 +71,7 @@ fn find() -> Result<(), Error> {
 
     let mut config = Config::new();
     config.atleast_version(version);
+    config.print_system_libs(false);
     if hardcode_shared_libs {
         config.cargo_metadata(false);
     }
