@@ -8,6 +8,10 @@ glib-sys = "^0.7.0"
 gobject-sys = "^0.7.0"
 libc = "0.2"
 
+[dev-dependencies]
+shell-words = "0.1.0"
+tempdir = "0.3"
+
 [features]
 dox = []
 v2_24 = []
@@ -28,6 +32,9 @@ v2_50 = ["v2_48"]
 v2_52 = ["v2_50"]
 v2_54 = ["v2_52"]
 v2_56 = ["v2_54"]
+v2_58 = ["v2_56"]
+v2_60 = ["v2_58"]
+v2_62 = ["v2_60"]
 
 [lib]
 name = "soup_sys"
