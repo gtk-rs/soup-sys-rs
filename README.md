@@ -31,4 +31,4 @@ Contributor you're welcome!
 
 ## License
 
-__javascriptcore-rs__ is available under the MIT License, please refer to it.
+__soup-sys__ is available under the MIT License, please refer to it.
