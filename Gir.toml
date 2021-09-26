@@ -7,3 +7,9 @@ external_libraries = [
    "GObject",
    "Gio",
 ]
+
+ignore = [
+  "Soup.MICRO_VERSION",
+  "Soup.MINOR_VERSION",
+  "Soup.VERSION_MIN_REQUIRED",
+]
